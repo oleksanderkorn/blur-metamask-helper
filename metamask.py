@@ -100,9 +100,9 @@ driver.get(collection)
 
 # Select cheapest NFT
 clickxp(
-    '//*[@id="collection-nfts-section"]/div[2]/div/div[2]/div/div/div[1]/div[1]/div/input')
+    '//*[@id="collection-main"]/div[2]/div/div[2]/div/div/div[1]/div[1]/div/input')
 # Click Buy Button
-clickxp('//*[@id="__next"]/div/main/div/div[5]/button')
+clickxp('//*[@id="__next"]/div/main/div/div[4]/button')
 time.sleep(2)
 
 # Switch to MetaMask
@@ -137,9 +137,9 @@ clickxp('//*[@id="portfolio-main"]/div[2]/div/div[2]/div/div/div/div[1]/div/inpu
 clickxp('//*[@id="__next"]/div/main/div/div[6]/div/button[1]')
 
 # Enable LooksRare
-clickxp('//*[@id="__next"]/div/main/div/div[8]/div/div[1]/div[2]/button[2]')
+clickxp('//*[@id="__next"]/div/main/div/div[8]/div/div[1]/div[2]/div[4]/button')
 # Enable OpenSea
-clickxp('//*[@id="__next"]/div/main/div/div[8]/div/div[1]/div[2]/button[3]')
+clickxp('//*[@id="__next"]/div/main/div/div[8]/div/div[1]/div[2]/div[5]/button')
 
 # Enter price 00.1 ETH
 driver.find_element(
