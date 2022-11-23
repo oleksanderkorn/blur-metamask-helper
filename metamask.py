@@ -27,7 +27,7 @@ if args.seed != None:
     seed = args.seed
 
 if args.url != None:
-    seed = args.url
+    collection = args.url
 
 if args.price != None:
     listPrice = args.price

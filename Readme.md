@@ -9,7 +9,7 @@
 
 ## Steps
 
-0. Generate new wallet using metamask (it will print the seed in the terrminal and store a screenshot in the current folder for you to backup):
+0. Generate new wallet using metamask (it will print the address, seed and mnemonic in the terminal, save json with those details and store a screenshot in the current folder for you to backup):
 
 ```
 python metamask-new-wallet.py
