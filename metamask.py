@@ -6,11 +6,31 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 import time
+import argparse
+parser = argparse.ArgumentParser()
 
-# CONFIGURATION
+# CONFIGURATION DEFAULTS
 seed = "ENTER 12 WORDS SEED PHRASE HERE"
-collection = "https://blur.io/collection/async-blueprints"
+collection = "https://blur.io/collection/dotbit"
 listPrice = "0.01"
+
+parser.add_argument("--url", default=collection,
+                    required=False, help="Blur collection URL, e.g. https://blur.io/collection/dotbit")
+parser.add_argument("--price", default=listPrice, required=False,
+                    help="NFT listt price in ETH, defaults to 0.01")
+parser.add_argument("--seed", default=seed, required=False,
+                    help="Mnemonic seed of the wallet to import in MetaMask")
+
+args = parser.parse_args()
+
+if args.seed != None:
+    seed = args.seed
+
+if args.url != None:
+    seed = args.url
+
+if args.price != None:
+    listPrice = args.price
 
 
 def clickxp(xpath):
