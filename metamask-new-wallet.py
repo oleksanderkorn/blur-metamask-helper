@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 import time
+import json
 
 # CONFIGURATION
 password = "password"
@@ -79,5 +80,13 @@ walletAddres = WebDriverWait(driver, 20).until(EC.visibility_of_element_located(
 print(f'Address: {walletAddres}')
 print(f'Mnemonic: {seed}')
 print(f'Private Key: {privkey}')
+filename = f'{walletAddres}.json'
+data = {
+    'address': f'{walletAddres}',
+    'mnemonic': f'{seed}',
+    'privateKey': f'{privkey}',
+}
+with open(filename, 'w') as file_object:  # open the file in write mode
+    json.dump(data, file_object, indent=4)
 
 driver.close()
