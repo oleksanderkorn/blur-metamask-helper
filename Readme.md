@@ -17,16 +17,17 @@ python metamask-new-wallet.py
 
 1. Top up your new wallet with some ETH (E.g. using FTX/Blockfolio without fees)
 
-2. Edit configuration in `metamask.py`:
+2. Run the Script to buy and list the cheapest item in the selected collection using following format:
+
+```
+python metamask.py --url https://blur.io/collection/dotbit --price=0.01 --seed="ENTER 12 WORDS SEED PHRASE HERE PLEASE PLEASE PLEASE PLEASE PLEASE PLEASE"
+```
+
+3. If you do not want to used arguments, edit configuration in `metamask.py` and add them there:
 
 ```
 seed = "ENTER YOUR SEED HERE"
 collection = "https://blur.io/collection/async-blueprints"
 listPrice = "0.01"
-```
-
-3. Run the Script to buy and list the cheapest item in the selected collection:
-
-```
 python metamask.py
 ```

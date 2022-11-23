@@ -10,7 +10,7 @@ import argparse
 parser = argparse.ArgumentParser()
 
 # CONFIGURATION DEFAULTS
-seed = "ENTER 12 WORDS SEED PHRASE HERE"
+seed = "ENTER 12 WORDS SEED PHRASE HERE PLEASE PLEASE PLEASE PLEASE PLEASE PLEASE"
 collection = "https://blur.io/collection/dotbit"
 listPrice = "0.01"
 
